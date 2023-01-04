@@ -6,13 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Project</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            background-color: black;
+
+        * {
+            font-family: Roboto, sans-serif;
+            
         }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background-color: black;
+            
+        }
+
+        section {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            width: 100%;
+        }
+
+        #button-list {
+            display: flex;
+        }
+
+        #current-score {
+            margin-top: 13px;
+        }
+
+        #current-score, #new-score {
+            padding: 13px;
+            text-align: center;
+            transition-duration: 0.2s;
+        }
+
+        button {
+            background-color: whitesmoke;
+            padding: 26px;
+            border-radius: 20px;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+
     </style>
 </head>
 <body>
+
+    <section>
+
+        <h1>Rock, Paper & Scissors Project</h1>
+
+        <div class="button-list">
+            <button id="rock" data-choice="rock">Rock</button>
+            <button id=paper>Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+
+        <div id="score">
+            <div id='current-score'></div>
+            <div id='new-score'></div>
+        </div>
+
+    </section>
+        
+
     <script src="script.js"></script>
     
 </body>
